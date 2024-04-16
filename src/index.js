@@ -18,8 +18,8 @@ root.render(
     <Welcome name="Cahal" />
     <Welcome name="Edite" /> 
   */}
-  <CommentList />
- {/*  <NotificationList />  */} 
+  {/* <CommentList /> */}
+  <NotificationList />  
   </React.StrictMode>
 );
 
