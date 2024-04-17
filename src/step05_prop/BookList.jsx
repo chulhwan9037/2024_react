@@ -2,7 +2,7 @@ import { Container, List, ListItem } from "@mui/material";
 import React, {Component} from "react";
 import BookListItem from "./BookListItem";
 
-class BookList extends Component{
+class BookList extends React.Component{
     render(){
         //const books = this.props.books;
         // 구조 분해 할당
