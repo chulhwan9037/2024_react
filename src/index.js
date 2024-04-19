@@ -4,11 +4,19 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import NameForm from './step10_form/NameForm';
 import SelectForm from './step10_form/SelectForm';
+import MultiSelectForm from './step10_form/MultiSelectForm';
+import CheckBoxForm from './step10_form/CheckBoxForm';
+import RadioButton from './step10_form/RadioButton';
+import SignUpForm from './step10_form/SignUpForm';
+import Calc from './step11_sharedState/Calc';
+import Calc2 from './step11_sharedState/Calc2';
+import Calc3 from './step11_sharedState/Calc3';
+import Calc4 from './step11_sharedState/Calc4';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    <React.StrictMode> 
-<SelectForm />
+<Calc4 />
    </React.StrictMode> 
 );
 

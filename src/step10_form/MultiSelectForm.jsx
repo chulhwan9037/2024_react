@@ -1,36 +1,33 @@
 import React, { useState } from 'react';
 
-function SelectForm(props) {
-    const [fruit_name, setFruit_name] = useState('grape');
+function MultiSelectForm(props) {
+    const [fruit_name, setFruit_name] = useState([]);
     
-  
     const handleChange = (e) => {
-        setFruit_name(e.target.value);
-    }
-    
-  
+        // 배열처리
+        const fruitArr = Array.from(e.target.selectedOptions, option => option.value);
+        setFruit_name(fruitArr);
+    }   
 
     const handleSubmit = (e) => {
-        alert('입력한 이름 : ' + fruit_name);
         e.preventDefault();
+        console.log("선택한 과일들 : " , fruit_name);
     }
 
 
     return(
         <form onSubmit={handleSubmit}>
-           <label>
-                과일을 선택하세요 : 
-                <select value={fruit_name} onChange={handleChange}>
+            <label >
+                과일을 여러개 선택하세요 : 
+                <select multiple value={fruit_name} onChange={handleChange}>
                     <option value="apple">사과</option>
                     <option value="grape">포도</option>
                     <option value="strawberry">딸기</option>
                     <option value="watermelon">수박</option>
                 </select>
-           </label>
-           <hr />
-           
+            </label>
             <button type='submit'>보내기</button>
-        </form>
+        </form>    
     )
 }
-export default SelectForm;
+export default MultiSelectForm;
